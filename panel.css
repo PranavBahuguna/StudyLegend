@@ -1,32 +1,36 @@
 body {
     font-family: 'Roboto', sans-serif;
+    font-size: 150%;
     color: #FFFFFF;
     margin: 0;
 }
 
-body.overall {
-    margin: 0;
-}
-
 div, iframe {
-    border-style: solid;
     border-width: 0px;
 }
 
-h1, h2, h3 {
-    margin: 0.33em 0 0.33em 0;
+iframe {
+    position: fixed;
 }
 
-h1 {
-    font-size: 3em;
+.menuPanel ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-h2 {
-    font-size: 2.25em;
+.menuPanel ul.overall {
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    border-color: #2A2A2A;
 }
 
-h3 {
-    font-size: 1em;
+.menuPanel li {
+    margin-left: 0;
+    display: block;
+    padding: 10px 15px;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: #2A2A2A;
 }
 
 button.customBlue {
