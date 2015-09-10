@@ -13,24 +13,77 @@ iframe {
     position: fixed;
 }
 
-.menuPanel ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.menuPanel ul.overall {
-    border-width: 1px 0 0 0;
+.menuPanel div.colorBar {
+    margin: 0;
+    width: 5px;
+    height: calc(100% - 1px);
+    float: left;
+    border-width: 1px 0 0 1px;
     border-style: solid;
     border-color: #2A2A2A;
 }
 
-.menuPanel li {
-    margin-left: 0;
+.menuPanel div.green div.colorBar {
+    background-color: green;
+}
+
+.menuPanel div.green a:hover {
+    color: green;
+}
+
+.menuPanel div.red div.colorBar {
+    background-color: red;
+}
+
+.menuPanel div.red a:hover {
+    color: red;
+}
+
+.menuPanel div.blue div.colorBar {
+    background-color: blue;
+}
+
+.menuPanel div.blue a:hover {
+    color: blue;
+}
+
+.menuPanel div.yellow div.colorBar {
+    background-color: yellow;
+}
+
+.menuPanel div.yellow a:hover {
+    color: yellow;
+}
+
+.menuPanel div.item {
+    margin: 0;
     display: block;
-    padding: 10px 15px;
+    overflow: auto;
+    height: 50px;
+    line-height: 49px;
+}
+
+.menuPanel div.overall {
     border-width: 0 0 1px 0;
     border-style: solid;
     border-color: #2A2A2A;
+}
+
+.menuPanel a {
+    margin-left: 0;
+    display: block;
+    overflow: auto;
+    height: calc(100% - 1px);
+    background: url('/img/menu_right_arrow.png') no-repeat 1% 50%;
+    background-size: 28px;
+    padding-left: 35px;
+    border-width: 1px 1px 0 1px;
+    border-style: solid;
+    border-color: #2A2A2A;
+}
+
+.menuPanel a:hover {
+    color: green;
 }
 
 button.customBlue {
