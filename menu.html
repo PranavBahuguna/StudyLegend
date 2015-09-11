@@ -13,9 +13,13 @@
   $(document).ready(function() {
 
     // Allows menus to be opened/closed when clicked on.
-    $('li').click(function(ev) {
-      console.log("Open Sesame!");
-      $(this).find('>ul').slideToggle();
+    $('a.menu').click(function(ev) {
+      if ($(this).hasClass('collapsed')) {
+        $(this).removeClass('collapsed').addClass('expanded');
+      } else if ($(this).hasClass('expanded')) {
+        $(this).removeClass('expanded').addClass('collapsed');
+      }
+      $(this).parent().find('>ul').slideToggle();
       ev.stopPropagation();
     });
 
@@ -25,21 +29,21 @@
 <body>
   <h2 style="margin-left:10px">Menu</h2>
   <ul class="overall">
-    <li><a>Menu A</a>
-      <ul class="menu">
-        <li><a>Submenu A</a>
-          <ul class="menu">
-            <li><a>Sub-SubMenu A</a></li>
-            <li><a>Sub-SubMenu B</a></li>
+    <li><a class="menu collapsed">Menu A</a>
+      <ul>
+        <li><a class="menu collapsed">Submenu A</a>
+          <ul>
+            <li><a class="item">Item A</a></li>
+            <li><a class="item">Item B</a></li>
           </ul>
         </li>
-        <li><a>Submenu B</a></li>
-        <li><a>Submenu C</a></li>
+        <li><a class="item">Item C</a></li>
+        <li><a class="item">Item D</a></li>
       </ul>
     </li>
-    <li><a>Menu B</a></li>
-    <li><a>Menu C</a></li>
-    <li><a>Menu D</a></li>
+    <li><a class="item">Item E</a></li>
+    <li><a class="item">Item F</a></li>
+    <li><a class="item">Item G</a></li>
   </ul>
 </body>
 </html>

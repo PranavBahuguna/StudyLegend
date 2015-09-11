@@ -23,14 +23,13 @@ ul ul {
   display: none;
 }
 
-ul.menu {
+ul {
     border-width: 0 0 0 8px;
     border-style: solid;
 }
 
 ul.overall {
     border-width: 1px 0 0 0;
-    border-style: solid;
     border-color: #2A2A2A;
 }
 
@@ -39,17 +38,27 @@ li a {
     overflow: auto;
     height: 50px;
     line-height: 50px;
-    background: url('/img/menu_right_arrow.png') no-repeat 1% 50%;
-    background-size: 28px;
     padding-left: 35px;
     border-width: 0px 1px 1px 1px;
     border-style: solid;
     border-color: #2A2A2A;
 }
 
-li a:hover {
-    background-color:
+li a.item {
+    background: url('/img/page-icon.png') no-repeat 1% 50%;
+    background-size: 28px;
 }
+
+li a.menu.expanded {
+    background: url('/img/menu-down-arrow.png') no-repeat 1% 50%;
+    background-size: 28px;
+}
+
+li a.menu.collapsed {
+    background: url('/img/menu-right-arrow.png') no-repeat 1% 50%;
+    background-size: 28px;
+}
+
 
 button.customBlue {
   background: #00ACE9;
