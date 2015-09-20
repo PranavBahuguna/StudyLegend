@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <contents>
-  <menu src="Menu_A/Menu_A.html" color="#2A2A2A">
+  <topMenu src="Menu_A/Menu_A.html" color="white">
     <name>Menu A</name>
     <linkName>Menu_A</linkName>
     <items>
@@ -28,7 +28,17 @@
         <linkName>Item_D</linkName>
       </item>
     </items>
-  </menu>
+  </topMenu>
+  <topMenu src="Menu_B/Menu_B.html" color="green">
+    <name>Menu B</name>
+    <linkName>Menu_B</linkName>
+    <items>
+      <item src="Item_G/Item_G.html">
+        <name>Item G</name>
+        <linkName>Item_G</linkName>
+      </item>
+    </items>
+  </topMenu>
   <item src="Item_E/Item_E.html">
     <name>Item E</name>
     <linkName>Item_E</linkName>

@@ -18,32 +18,43 @@ function generateMenuFromFile(htmlContainer, xmlFile) {
     generateMenu(htmlContainer, contents);
 }
 
-// Recursive function that generates
+// Recursive function that generates a menu from the contents of an xml file.
 function generateMenu(htmlContainer, xmlMenu) {
-    // Adds a list to the htmlContainer and sets the htmlContainer to be the
-    // newly created list.
+
     htmlContainer.innerHTML += "<ul></ul>";
     htmlContainer = htmlContainer.getElementsByTagName('ul')[0];
 
+    // Adds border-color attribute if the parent node is a topMenu/
+    if (xmlMenu.parentNode.nodeName == 'topMenu') {
+        htmlContainer.setAttribute('style', 'border-color:'
+            + xmlMenu.parentNode.getAttribute('color'));
+    }
+
     // Obtains all menus and items from the xmlMenu.
-    var menus = []
-    var items = []
-    for (i = 0; i < xmlMenu.childNodes.length; i++) {
-        if (xmlMenu.childNodes[i].nodeName == "menu") {
+    var menus = [];
+    var items = [];
+    for (var i = 0; i < xmlMenu.childNodes.length; i++) {
+        if (xmlMenu.childNodes[i].nodeName == 'menu'
+            || xmlMenu.childNodes[i].nodeName == 'topMenu')
+        {
             menus.push(xmlMenu.childNodes[i]);
-        } else if (xmlMenu.childNodes[i].nodeName == "item") {
+        }
+        else if (xmlMenu.childNodes[i].nodeName == 'item') {
             items.push(xmlMenu.childNodes[i]);
         }
     }
 
     // Writes each menu in the menus array into the htmlContainer and calls
     // generateMenu on the new menu.
-    for (i = 0; i < menus.length; i++) {
-        htmlContainer.innerHTML += '<li><a class="menu collapsed">' + menus[i].childNodes[1].innerHTML + '</a></li>'
-        arguments.callee(htmlContainer.childNodes[0], menus[i].getElementsByTagName('items')[0]);
+    for (var i = 0; i < menus.length; i++) {
+        htmlContainer.innerHTML += '<li><a class="menu collapsed">'
+            + menus[i].childNodes[1].innerHTML + '</a></li>';
+        generateMenu(htmlContainer.childNodes[i],
+            menus[i].getElementsByTagName('items')[0]);
     }
     // Adds remaining items into the htmlContainer.
-    for (i = 0; i < items.length; i++) {
-        htmlContainer.innerHTML += '<li><a class="item">' + items[i].childNodes[1].innerHTML + '</a></li>'
+    for (var i = 0; i < items.length; i++) {
+        htmlContainer.innerHTML += '<li><a class="item">'
+            + items[i].childNodes[1].innerHTML + '</a></li>'
     }
 }
