@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<contents>
+  <menu src="Menu_A/Menu_A.html" color="#2A2A2A">
+    <name>Menu A</name>
+    <linkName>Menu_A</linkName>
+    <items>
+      <menu src="Menu_A/Submenu_A/Submenu_A.html">
+        <name>Submenu A</name>
+        <linkName>Submenu_A</linkName>
+        <items>
+          <item src="Menu_A/Submenu_A/Item_A/Item_A.html">
+            <name>Item A</name>
+            <linkName>Item_A</linkName>
+          </item>
+          <item src="Menu_A/Submenu_A/Item_B/Item_B.html">
+            <name>Item B</name>
+            <linkName>Item_B</linkName>
+          </item>
+        </items>
+      </menu>
+      <item src="Menu_A/Item_C/Item_C.html">
+        <name>Item C</name>
+        <linkName>Item_C</linkName>
+      </item>
+      <item src="Menu_A/Item_D/Item_D.html">
+        <name>Item D</name>
+        <linkName>Item_D</linkName>
+      </item>
+    </items>
+  </menu>
+  <item src="Item_E/Item_E.html">
+    <name>Item E</name>
+    <linkName>Item_E</linkName>
+  </item>
+  <item src="Item_F/Item_F.html">
+    <name>Item F</name>
+    <linkName>Item_F</linkName>
+  </item>
+</contents>

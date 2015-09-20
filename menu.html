@@ -6,12 +6,14 @@
   <title>Menu</title>
   <link rel="stylesheet" href="panel.css" type="text/css" media="screen">
   <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script type="text/javascript" src="scripts.js"></script>
 </head>
+
 
 
 <script type="text/javascript">
   $(document).ready(function() {
-
+    generateMenuFromFile(document.getElementById('overall'), "links.xml");
     // Allows menus to be opened/closed when clicked on.
     $('a.menu').click(function(ev) {
       if ($(this).hasClass('collapsed')) {
@@ -22,13 +24,14 @@
       $(this).parent().find('>ul').slideToggle();
       ev.stopPropagation();
     });
-
   });
 </script>
 
 <body>
   <h2 style="margin-left:10px">Menu</h2>
-  <ul class="overall">
+  <div id="overall"></div>
+  <!--
+  <ul id="overall">
     <li><a class="menu collapsed">Menu A</a>
       <ul>
         <li><a class="menu collapsed">Submenu A</a>
@@ -43,7 +46,7 @@
     </li>
     <li><a class="item">Item E</a></li>
     <li><a class="item">Item F</a></li>
-    <li><a class="item">Item G</a></li>
   </ul>
+  -->
 </body>
 </html>

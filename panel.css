@@ -17,18 +17,15 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-}
-
-ul ul {
-  display: none;
-}
-
-ul {
     border-width: 0 0 0 8px;
     border-style: solid;
 }
 
-ul.overall {
+ul ul {
+    display: none;
+}
+
+#overall ul:first-child {
     border-width: 1px 0 0 0;
     border-color: #2A2A2A;
 }
@@ -49,14 +46,26 @@ li a.item {
     background-size: 28px;
 }
 
+li a.item:hover {
+    background-color: #545454;
+}
+
 li a.menu.expanded {
     background: url('/img/menu-down-arrow.png') no-repeat 1% 50%;
     background-size: 28px;
 }
 
+li a.menu.expanded:hover {
+    background-color: #545454;
+}
+
 li a.menu.collapsed {
     background: url('/img/menu-right-arrow.png') no-repeat 1% 50%;
     background-size: 28px;
+}
+
+li a.menu.collapsed:hover {
+    background-color: #545454;
 }
 
 
