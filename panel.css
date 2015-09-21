@@ -39,6 +39,8 @@ li a {
     border-width: 0px 1px 1px 1px;
     border-style: solid;
     border-color: #2A2A2A;
+    color: white;
+    text-decoration: none;
 }
 
 li a.item {

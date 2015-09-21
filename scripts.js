@@ -23,7 +23,6 @@ function generateMenu(htmlContainer, xmlMenu) {
 
     htmlContainer.innerHTML += "<ul></ul>";
     htmlContainer = htmlContainer.getElementsByTagName('ul')[0];
-
     // Adds border-color attribute if the parent node is a topMenu/
     if (xmlMenu.parentNode.nodeName == 'topMenu') {
         htmlContainer.setAttribute('style', 'border-color:'
@@ -47,14 +46,18 @@ function generateMenu(htmlContainer, xmlMenu) {
     // Writes each menu in the menus array into the htmlContainer and calls
     // generateMenu on the new menu.
     for (var i = 0; i < menus.length; i++) {
-        htmlContainer.innerHTML += '<li><a class="menu collapsed">'
+        htmlContainer.innerHTML += '<li><a href='
+            + menus[i].getAttribute('href')
+            + ' target="main-panel" class="menu collapsed">'
             + menus[i].childNodes[1].innerHTML + '</a></li>';
         generateMenu(htmlContainer.childNodes[i],
             menus[i].getElementsByTagName('items')[0]);
     }
     // Adds remaining items into the htmlContainer.
     for (var i = 0; i < items.length; i++) {
-        htmlContainer.innerHTML += '<li><a class="item">'
+        htmlContainer.innerHTML += '<li><a href='
+            + items[i].getAttribute('href')
+            + ' target="main-panel" class="item">'
             + items[i].childNodes[1].innerHTML + '</a></li>'
     }
 }
