@@ -23,6 +23,7 @@ function generateMenu(htmlContainer, xmlMenu) {
 
     htmlContainer.innerHTML += "<ul></ul>";
     htmlContainer = htmlContainer.getElementsByTagName('ul')[0];
+
     // Adds border-color attribute if the parent node is a topMenu/
     if (xmlMenu.parentNode.nodeName == 'topMenu') {
         htmlContainer.setAttribute('style', 'border-color:'
@@ -58,6 +59,6 @@ function generateMenu(htmlContainer, xmlMenu) {
         htmlContainer.innerHTML += '<li><a href='
             + items[i].getAttribute('href')
             + ' target="main-panel" class="item">'
-            + items[i].childNodes[1].innerHTML + '</a></li>'
+            + items[i].childNodes[1].innerHTML + '</a></li>';
     }
 }

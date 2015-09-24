@@ -1,50 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <contents>
-  <topMenu href="Menu_A/Menu_A.html" color="white">
+  <topMenu href="Contents/Menu_A/Menu_A.html" color="white">
     <name>Menu A</name>
     <linkName>Menu_A</linkName>
     <items>
-      <menu href="Menu_A/Submenu_A/Submenu_A.html">
+      <menu href="Contents/Menu_A/Submenu_A/Submenu_A.html">
         <name>Submenu A</name>
         <linkName>Submenu_A</linkName>
         <items>
-          <item href="Menu_A/Submenu_A/Item_A/Item_A.html">
+          <item href="Contents/Menu_A/Submenu_A/Item_A/Item_A.html">
             <name>Item A</name>
             <linkName>Item_A</linkName>
           </item>
-          <item href="Menu_A/Submenu_A/Item_B/Item_B.html">
+          <item href="Contents/Menu_A/Submenu_A/Item_B/Item_B.html">
             <name>Item B</name>
             <linkName>Item_B</linkName>
           </item>
         </items>
       </menu>
-      <item href="Menu_A/Item_C/Item_C.html">
+      <item href="Contents/Menu_A/Item_C/Item_C.html">
         <name>Item C</name>
         <linkName>Item_C</linkName>
       </item>
-      <item href="Menu_A/Item_D/Item_D.html">
+      <item href="Contents/Menu_A/Item_D/Item_D.html">
         <name>Item D</name>
         <linkName>Item_D</linkName>
       </item>
     </items>
   </topMenu>
-  <topMenu href="Menu_B/Menu_B.html" color="green">
+  <topMenu href="Contents/Menu_B/Menu_B.html" color="green">
     <name>Menu B</name>
     <linkName>Menu_B</linkName>
     <items>
-      <item href="Item_G/Item_G.html">
+      <item href="Contents/Item_G/Item_G.html">
         <name>Item G</name>
         <linkName>Item_G</linkName>
       </item>
     </items>
   </topMenu>
-  <item href="Item_E/Item_E.html">
+  <item href="Contents/Item_E/Item_E.html">
     <name>Item E</name>
     <linkName>Item_E</linkName>
   </item>
-  <item href="Item_F/Item_F.html">
+  <item href="Contents/Item_F/Item_F.html">
     <name>Item F</name>
-    <linkName>Item_F</linkName>
+    <linkName>ItemF</linkName>
+  </item>
+  <item href="Contents/Example_Content/Example_Content.html">
+    <name>Example Content</name>
+    <linkName>Example_Content</linkName>
   </item>
 </contents>
