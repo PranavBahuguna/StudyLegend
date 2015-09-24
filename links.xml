@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<contents>
+  <topMenu href="Contents/Menu_A/Menu_A.html" color="white">
+    <name>Menu A</name>
+    <linkName>Menu_A</linkName>
+    <items>
+      <menu href="Contents/Menu_A/Submenu_A/Submenu_A.html">
+        <name>Submenu A</name>
+        <linkName>Submenu_A</linkName>
+        <items>
+          <item href="Contents/Menu_A/Submenu_A/Item_A/Item_A.html">
+            <name>Item A</name>
+            <linkName>Item_A</linkName>
+          </item>
+          <item href="Contents/Menu_A/Submenu_A/Item_B/Item_B.html">
+            <name>Item B</name>
+            <linkName>Item_B</linkName>
+          </item>
+        </items>
+      </menu>
+      <item href="Contents/Menu_A/Item_C/Item_C.html">
+        <name>Item C</name>
+        <linkName>Item_C</linkName>
+      </item>
+      <item href="Contents/Menu_A/Item_D/Item_D.html">
+        <name>Item D</name>
+        <linkName>Item_D</linkName>
+      </item>
+    </items>
+  </topMenu>
+  <topMenu href="Contents/Menu_B/Menu_B.html" color="green">
+    <name>Menu B</name>
+    <linkName>Menu_B</linkName>
+    <items>
+      <item href="Contents/Menu_B/Item_G/Item_G.html">
+        <name>Item G</name>
+        <linkName>Item_G</linkName>
+      </item>
+    </items>
+  </topMenu>
+  <item href="Contents/Item_E/Item_E.html">
+    <name>Item E</name>
+    <linkName>Item_E</linkName>
+  </item>
+  <item href="Contents/Item_F/Item_F.html">
+    <name>Item F</name>
+    <linkName>ItemF</linkName>
+  </item>
+  <item href="Contents/Example_Content/Example_Content.html">
+    <name>Example Content</name>
+    <linkName>Example_Content</linkName>
+  </item>
+</contents>

@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title>Menu</title>
+  <link rel="stylesheet" href="panel.css" type="text/css" media="screen">
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script type="text/javascript" src="scripts.js"></script>
+</head>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    generateMenuFromFile(document.getElementById('overall'), "links.xml");
+    // Allows menus to be opened/closed when clicked on.
+    $('a.menu').click(function(ev) {
+      if ($(this).hasClass('collapsed')) {
+        $(this).removeClass('collapsed').addClass('expanded');
+      } else if ($(this).hasClass('expanded')) {
+        $(this).removeClass('expanded').addClass('collapsed');
+      }
+      $(this).parent().find('>ul').slideToggle();
+      ev.stopPropagation();
+    });
+  });
+</script>
+
+<body>
+  <h2 style="margin-left:10px">Menu</h2>
+  <div id="overall"></div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF;
+}
+
+body {counter-reset: h2}
+h2 {counter-reset: h3}
+h3 {counter-reset: h4}
+h4 {counter-reset: h5}
+h5 {counter-reset: h6}
+
+h2:before {counter-increment: h2; content: counter(h2) ". "}
+h3:before {counter-increment: h3; content: counter(h2) "." counter(h3) ". "}
+h4:before {counter-increment: h4; content: counter(h2) "." counter(h3) "." counter(h4) ". "}
+h5:before {counter-increment: h5; content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) ". "}
+h6:before {counter-increment: h6; content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) ". "}
+
+h2.nocount:before, h3.nocount:before, h4.nocount:before, h5.nocount:before, h6.nocount:before { content: ""; counter-increment: none }
+
+a {
+    text-decoration: none;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table {
+    width: calc(100% - 2em);
+    background-color: #666666;
+    margin: 1.5em 1em 1.5em 1em;
+}
+
+table th {background-color: #390072;}
+table.red th {background-color: #D43F3F;}
+table.blue th {background-color: #00ACE9;}
+table.green th {background-color: #6A9A1F;}
+
+th, td {
+    padding: 5px;
+    text-align: left;
+}
