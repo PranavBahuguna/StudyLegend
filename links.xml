@@ -33,7 +33,7 @@
     <name>Menu B</name>
     <linkName>Menu_B</linkName>
     <items>
-      <item href="Contents/Item_G/Item_G.html">
+      <item href="Contents/Menu_B/Item_G/Item_G.html">
         <name>Item G</name>
         <linkName>Item_G</linkName>
       </item>
