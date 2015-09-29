@@ -24,10 +24,15 @@ function generateMenu(htmlContainer, xmlMenu) {
     htmlContainer.innerHTML += "<ul></ul>";
     htmlContainer = htmlContainer.getElementsByTagName('ul')[0];
 
-    // Adds border-color attribute if the parent node is a topMenu/
-    if (xmlMenu.parentNode.nodeName == 'topMenu') {
+    // Obtains the topMenu node that contains the current node and sets the
+    // border color to the topMenu color attribute.
+    if (xmlMenu.nodeName != 'contents') {
+        topNode = xmlMenu;
+        while (topNode.nodeName != 'topMenu') {
+            topNode = topNode.parentNode;
+        }
         htmlContainer.setAttribute('style', 'border-color:'
-            + xmlMenu.parentNode.getAttribute('color'));
+            + topNode.getAttribute('color'));
     }
 
     // Obtains all menus and items from the xmlMenu.

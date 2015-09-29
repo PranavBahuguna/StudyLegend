@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <contents>
-  <topMenu href="Contents/Menu_A/Menu_A.html" color="white">
+  <topMenu href="Contents/Menu_A/Menu_A.html" color="blue">
     <name>Menu A</name>
     <linkName>Menu_A</linkName>
     <items>
